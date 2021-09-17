@@ -1,0 +1,24 @@
+{
+  "name": "welcome-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "childprocess": "^2.0.2",
+    "discord.js": "^12.5.3",
+    "mathjs": "^9.4.4",
+    "node-addon-api": "^4.0.0",
+    "node-canvas": "^2.7.0",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0"
+  }
+}
