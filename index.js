@@ -28,11 +28,7 @@ client.on('message', async message => {
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
 	// Invalid command
-	if (!client.commands.has(command)) {
-		message.reply('No Matching Command found!');
-		client.commands.get('help').execute(message, args);
-		return;
-	}
+	if (!client.commands.has(command)) return;
 
 	// Try to get and execute a valid command
 	try {
