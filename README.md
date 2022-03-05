@@ -5,7 +5,8 @@ Uses Seam Carving to resize image to dimensions specified by user without distor
 
 Seam Carving Example
 -----------------------------
-**Original:** ![original](test_images/castle_548x371.jpeg)
+**Original:** 
+![original](test_images/castle_548x371.jpeg)
 
 **Cropped:**
 ![cropped](test_images/castle_cropped.png)
@@ -29,6 +30,6 @@ Sample Command Usage:
  
 Example bot usage on discord:
 
-![ping-help](usage_examples/example_1)
-![avatar](usage_examples/example_2)
-![resize](usage_examples/example_3)
+![ping-help](usage_examples/example_1.JPG)
+![avatar](usage_examples/example_2.JPG)
+![resize](usage_examples/example_3.JPG)
