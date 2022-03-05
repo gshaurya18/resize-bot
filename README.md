@@ -6,15 +6,19 @@ Uses Seam Carving to resize image to dimensions specified by user without distor
 Seam Carving Example
 -----------------------------
 **Original:** 
+
 ![original](test_images/castle_548x371.jpeg)
 
 **Cropped:**
+
 ![cropped](test_images/castle_cropped.png)
 
 **Re-scaled:**
+
 ![re-scaled](test_images/castle_scaled.png)
 
 **Re-sized:**
+
 ![resized](test_images/castle_resized.png)
 
 *Original Example Image from [Wikipedia](https://en.wikipedia.org/wiki/Seam_carving), Modified with Resize-bot*
