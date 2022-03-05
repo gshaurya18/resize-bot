@@ -16,7 +16,8 @@ function attachIsImage(message) {
 }
 module.exports = {
 	name: 'resize',
-	description: 'resizes image using computer vision (seam carve)',
+	description: 'resizes image using seam carving',
+	usage: 'resize WIDTH [HEIGHT]',
 	async execute(message, args) {
 		// Check for attachments
 		let ImageLink = '';
