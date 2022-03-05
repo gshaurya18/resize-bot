@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.8.0",
+    "canvas": "^2.9.0",
     "childprocess": "^2.0.2",
     "discord.js": "^12.5.3",
     "mathjs": "^9.4.4",
