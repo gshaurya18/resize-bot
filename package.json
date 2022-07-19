@@ -12,7 +12,7 @@
   "dependencies": {
     "canvas": "^2.9.0",
     "childprocess": "^2.0.2",
-    "discord.js": "^12.5.3",
+    "discord.js": "^14.0.3-dev.1658145896-b316ac7.0",
     "mathjs": "^9.4.4",
     "node-addon-api": "^4.0.0",
     "node-canvas": "^2.7.0",
