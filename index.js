@@ -1,9 +1,8 @@
 const fs = require('fs');
-const Discord = require('discord.js');
-const { Client, GatewayIntentBits, Partials } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
 const config = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent], partials: [Partials.message] });
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 
 // Read names of command files (ending with .js)
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -22,7 +21,7 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', async message => {
-	// Ignore messages that done start with `prefix` or are sent by a bot
+	// Ignore messages that dont start with `prefix` or are sent by a bot
 	if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
 	// Seperate message into command and array of arguments (if any)
