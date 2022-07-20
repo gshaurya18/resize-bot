@@ -2,7 +2,7 @@ const Canvas = require('canvas');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const fs = require('fs');
-const Discord = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 const IMAGE_FILE_IN = 'myImage.txt';
 const IMAGE_FILE_OUT = 'myImage_out.ppm';
 // Limit Size to 1000 X 1000
@@ -77,7 +77,7 @@ module.exports = {
 
 		// Do nothing for same width, height
 		if (new_width === width && new_height === height) {
-			const attachment = new Discord.MessageAttachment(ImageLink);
+			const attachment = new AttachmentBuilder(ImageLink);
 			return message.channel.send(`Here is the resized image ${message.author}`, attachment);
 		}
 
@@ -154,9 +154,9 @@ module.exports = {
 		context.canvas.height = new_height;
 		context.putImageData(newImgData, 0, 0);
 
-		const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'resized-image.png');
+		const attachment = new AttachmentBuilder(canvas.toBuffer(), 'resized-image.png');
 
-		message.channel.send(`Here is the resized image ${message.author}`, attachment);
+		message.channel.send({ content: `Here is the resized image ${message.author}`, files: [attachment] });
 		console.log('All Done');
 	},
 };
